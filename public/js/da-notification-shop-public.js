@@ -16,7 +16,7 @@
 
 		function makeAjaxRequest() {
 			var xhr = new XMLHttpRequest();
-			xhr.open('POST', 'url_do_seu_servidor', true);
+			xhr.open('POST', da_notification_shop.ajaxurl, true);
 			xhr.setRequestHeader('Content-type', 'application/json');
 			xhr.onreadystatechange = function () {
 				if (xhr.readyState === 4) {
