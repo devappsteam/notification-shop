@@ -17,7 +17,7 @@
 		function makeAjaxRequest() {
 			var xhr = new XMLHttpRequest();
 			xhr.open('POST', da_notification_shop.ajaxurl, true);
-			xhr.setRequestHeader('Content-type', 'application/json');
+			xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 			xhr.onreadystatechange = function () {
 				if (xhr.readyState === 4) {
 					if (xhr.status === 200) {
@@ -34,7 +34,7 @@
 					}
 				}
 			};
-			xhr.send(JSON.stringify({ action: 'get_customers_products' }));
+			xhr.send('action=get_customers_products');
 		}
 
 		function showRandomNotification(customers, products) {
