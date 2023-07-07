@@ -98,7 +98,7 @@ class Da_Notification_Shop_Public
 		 * class.
 		 */
 		wp_enqueue_script('toast', plugin_dir_url(__FILE__) . 'js/toastify.js', array(), $this->version, false);
-		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/da-notification-shop-public.js', array('jquery', 'toast'), $this->version, false);
+		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/da-notification-shop-public.js', array('jquery', 'toast'), time(), false);
 		wp_localize_script($this->plugin_name, 'da_notification_shop', array('ajaxurl' => admin_url('admin-ajax.php')));
 	}
 

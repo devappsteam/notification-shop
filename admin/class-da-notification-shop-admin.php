@@ -75,6 +75,10 @@ class Da_Notification_Shop_Admin
 		 * class.
 		 */
 
+		if (!isset($_GET['page']) || empty($_GET['page']) || $_GET['page'] !== 'notifications') {
+			return;
+		}
+
 		wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/da-notification-shop-admin.css', array(), $this->version, 'all');
 	}
 
@@ -97,6 +101,9 @@ class Da_Notification_Shop_Admin
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
+		if (!isset($_GET['page']) || empty($_GET['page']) || $_GET['page'] !== 'notifications') {
+			return;
+		}
 
 		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/da-notification-shop-admin.js', array('jquery'), time(), false);
 
